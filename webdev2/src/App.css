@@ -1,5 +1,24 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2 fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". top ."
+    ". test ."
+    ". test .";
+}
+
+.MediaCategory{
+  grid-area: test;
+  justify-self: center;
+  background-color: blue;
+}
+
+.MediaWrap{
+  grid-area: top;
+  justify-self: center;
+  background-color: green;
 }
 
 .App-logo {
