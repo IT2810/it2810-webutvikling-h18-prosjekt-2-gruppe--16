@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/endre18/Webdev2#readme",
   "dependencies": {
+    "react": "^16.4.2",
     "react-init": "0.0.1"
   }
 }
