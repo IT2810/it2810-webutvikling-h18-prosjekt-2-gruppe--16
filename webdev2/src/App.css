@@ -8,7 +8,6 @@
     ". tabs tabs ."
     ". content category ."
     ". content category .";
-  background-color: gray;
 }
 
 .App h1{
@@ -18,23 +17,32 @@
 .MediaCategory{
   grid-area: category;
   justify-self: stretch;
-  background-color: blue;
 }
 
 .MediaWrap{
   grid-area: content;
   justify-self: stretch;
-  background-color: green;
 }
 
 .MediaSelect{
   grid-area: tabs;
-  justify-self: stretch;
-  background-color: gold;
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
 }
 
-@media only screen and (max-width: 600px){
-  body{
-    background-color: green;
+@media only screen and (max-width: 800px){  {/*for moblie and smaller browser windows*/}
+  .App {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+            ". headline ."
+            ". category ."
+            ". tabs ."
+            ". content .";
   }
 }
+
+{/*Viewport is used in index.html*/}
