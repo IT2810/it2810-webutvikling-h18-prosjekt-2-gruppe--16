@@ -1,47 +1,40 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 2 fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    ". top ."
-    ". test ."
-    ". test .";
+    ". headline headline ."
+    ". tabs tabs ."
+    ". content category ."
+    ". content category .";
+  background-color: gray;
+}
+
+.App h1{
+  grid-area: headline;
 }
 
 .MediaCategory{
-  grid-area: test;
-  justify-self: center;
+  grid-area: category;
+  justify-self: stretch;
   background-color: blue;
 }
 
 .MediaWrap{
-  grid-area: top;
-  justify-self: center;
+  grid-area: content;
+  justify-self: stretch;
   background-color: green;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.MediaSelect{
+  grid-area: tabs;
+  justify-self: stretch;
+  background-color: gold;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media only screen and (max-width: 600px){
+  body{
+    background-color: green;
+  }
 }
