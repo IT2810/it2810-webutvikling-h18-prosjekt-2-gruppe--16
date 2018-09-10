@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import './components/MediaCategory';
 import MediaCategory from "./components/MediaCategory";
 import MediaSelect from "./components/MediaSelect";
 import MediaWrap from "./components/MediaWrap";

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Text from "./Text";
+
 
 class MediaWrap extends Component {
     render() {
@@ -7,7 +9,7 @@ class MediaWrap extends Component {
                 <h4>media wrap</h4>
                 <p>picture component</p>
                 <p>audio component</p>
-                <p>text component</p>
+                <Text/>
             </div>
         );
     }
