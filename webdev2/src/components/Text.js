@@ -11,7 +11,8 @@ class Text extends Component {
 
     componentDidMount(){
         fetch(this.state.path)
-            .then((r) => r.text())
+            .then((r) => r.text()) //this code line need to 'write' lines into the variable
+            //we need to parse the text into lines
             .then(text  =>
                 this.setState({data:text})
             )
