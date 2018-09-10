@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Picture from "./Picture";
 
 class MediaWrap extends Component {
     render() {
@@ -8,6 +9,7 @@ class MediaWrap extends Component {
                 <p>picture component</p>
                 <p>audio component</p>
                 <p>text component</p>
+                <Picture src="media/picture/1.jpg"/>
             </div>
         );
     }
