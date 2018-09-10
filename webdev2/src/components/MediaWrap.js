@@ -9,7 +9,7 @@ class MediaWrap extends Component {
                 <h4>media wrap</h4>
                 <p>picture component</p>
                 <p>audio component</p>
-                <Text/>
+                <Text type={"songtext"} number={"4"}/>
             </div>
         );
     }
