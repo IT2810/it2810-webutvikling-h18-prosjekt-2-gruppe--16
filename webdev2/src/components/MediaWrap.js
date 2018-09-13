@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import Text from "./Text";
 
+=======
+import Picture from "./Picture";
+>>>>>>> picture
 
 class MediaWrap extends Component {
     render() {
@@ -9,7 +13,12 @@ class MediaWrap extends Component {
                 <h4>media wrap</h4>
                 <p>picture component</p>
                 <p>audio component</p>
+<<<<<<< HEAD
                 <Text/>
+=======
+                <p>text component</p>
+                <Picture src="media/picture/1.jpg"/>
+>>>>>>> picture
             </div>
         );
     }
