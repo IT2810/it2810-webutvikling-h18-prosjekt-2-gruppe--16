@@ -14,11 +14,15 @@ class MediaWrap extends Component {
                 <p>picture component</p>
                 <p>audio component</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Text/>
 =======
                 <p>text component</p>
                 <Picture src="media/picture/1.jpg"/>
 >>>>>>> picture
+=======
+                <Text type={"haiku"} number={"4"}/>
+>>>>>>> devText
             </div>
         );
     }
