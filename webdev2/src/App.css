@@ -31,6 +31,13 @@
   flex-direction: row;
 }
 
+.picture {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
 @media only screen and (max-width: 800px){  {/*for moblie and smaller browser windows*/}
   .App {
     text-align: center;

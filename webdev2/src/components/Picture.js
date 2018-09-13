@@ -2,8 +2,9 @@ import React, {Component} from "react";
 
 class Picture extends React.Component {
   render (){
+    let classname = "picture";
     return(
-    <img src={this.props.src} alt={this.props.src}/>);
+    <img class={classname} src={this.props.src} alt={this.props.src}/>);
   }
 }
 
