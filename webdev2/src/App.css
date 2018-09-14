@@ -10,46 +10,60 @@
     ". content category .";
 }
 
-.App h1{
+.App h1 {
   grid-area: headline;
 }
 
-.MediaCategory{
+.MediaCategory {
   grid-area: category;
   justify-self: stretch;
 }
 
-.MediaWrap{
+.MediaWrap {
   grid-area: content;
   justify-self: stretch;
+  border: red solid 5px;
 }
 
-.MediaSelect{
+.DisplayTabs {
   grid-area: tabs;
   justify-self: center;
   display: flex;
   flex-direction: row;
 }
 
-.picture {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
+.DisplayTabs p {
+  margin-right: 20px;
+  background-color: #335D8F;
+  color: whitesmoke;
+  font-size: 25px;
+  padding: 15px;
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .16);
 }
 
+.picture {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
 
-@media only screen and (max-width: 800px){  {/*for moblie and smaller browser windows*/}
+@media only screen and (max-width: 800px) {
+   {
+    /*for moblie and smaller browser windows*/
+  }
   .App {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-            ". headline ."
-            ". category ."
-            ". tabs ."
-            ". content .";
+      ". headline ."
+      ". category ."
+      ". tabs ."
+      ". content .";
   }
 }
 
-{/*Viewport is used in index.html*/}
+ {
+  /*Viewport is used in index.html*/
+}

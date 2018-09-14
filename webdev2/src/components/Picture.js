@@ -1,10 +1,11 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 class Picture extends React.Component {
-  render (){
+  render() {
     let classname = "picture";
-    return(
-    <img class={classname} src={this.props.src} alt={this.props.src}/>);
+    return (
+      <img className={classname} src={this.props.src} alt={this.props.src} />
+    );
   }
 }
 
