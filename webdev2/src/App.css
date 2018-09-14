@@ -22,7 +22,6 @@
 .MediaWrap {
   grid-area: content;
   justify-self: stretch;
-  border: red solid 5px;
 }
 
 .DisplayTabs {
@@ -42,7 +41,7 @@
 }
 
 .picture {
-  width: 50%;
+  width: 80%;
   height: auto;
   object-fit: cover;
 }

@@ -1,26 +1,26 @@
 import React, { Component } from "react";
 import "./App.css";
 import MediaCategory from "./components/MediaCategory";
-import DisplayTabs from "./components/DisplayTabs";
+import Tab from "./components/Tab";
 import MediaDisplayArea from "./components/MediaDisplayArea";
 
 let media = {
     img: [
         {
             name: 'Light Cocktail lady',
-            path: 'media/img/1.jpg'
+            path: 'media/img/sosial/1.jpg'
         },
         {
             name: 'somethimg',
-            path: "media/img/2.jpg"
+            path: "media/img/sosial/2.jpg"
         },
         {
             name: 'somethimg more',
-            path: "media/img/3.jpg"
+            path: "media/img/sosial/3.jpg"
         },
         {
             name: 'somethimg morer',
-            path: "media/img/4.jpg"
+            path: "media/img/sosial/4.jpg"
         }
     ],
     audio: [],
@@ -58,12 +58,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Art gallery</h1>
-        <DisplayTabs
-            showTab1={this.showTab1}
-            showTab2={this.showTab2}
-            showTab3={this.showTab3}
-            showTab4={this.showTab4}
-        />
+        <div className="DisplayTabs">
+            <Tab tabToRender={this.showTab1} tabTitle={'TAB 1'} />
+            <Tab tabToRender={this.showTab2} tabTitle={'TAB 2'} />
+            <Tab tabToRender={this.showTab3} tabTitle={'TAB 3'} />
+            <Tab tabToRender={this.showTab4} tabTitle={'TAB 4'} />
+        </div>
 
         <MediaDisplayArea
             img={this.state.media.img[this.state.imgVar]}
@@ -77,27 +77,23 @@ class App extends Component {
   }
 
     showTab1 = () => {
-        console.log('tab 1 pressed');
         this.setState({imgVar: 0});
         this.setState({textVar: 0});
     };
 
     showTab2 = () => {
-        console.log('tab 2 pressed');
         this.setState({imgVar: 1});
         this.setState({textVar: 1});
 
     };
 
     showTab3 = () => {
-        console.log('tab 3 pressed');
         this.setState({imgVar: 2});
         this.setState({textVar: 2});
 
     };
 
     showTab4 = () => {
-        console.log('tab 4 pressed');
         this.setState({imgVar: 3});
         this.setState({textVar: 3});
 

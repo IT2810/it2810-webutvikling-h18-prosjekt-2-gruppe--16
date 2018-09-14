@@ -21,7 +21,7 @@ class MediaDisplayArea extends Component {
         return (
             <div className="MediaWrap">
 
-                <h3>Artwork: {this.props.img.name}</h3>
+                <h2>Artwork: {this.props.img.name}</h2>
                 <Picture src={this.props.img.path} />
                 <p>{this.state.parsedText}</p>
 

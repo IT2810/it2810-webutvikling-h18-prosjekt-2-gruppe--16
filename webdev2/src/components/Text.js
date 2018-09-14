@@ -5,7 +5,7 @@ class Text extends Component {
     super(props);
     this.state = {
       data: null,
-      path: "media/text/" + props.type + "/" + props.type + props.number //type= haiku/poem/songtext number=1-4
+      path: 'media/text/haiku/haiku1',
     };
   }
 
