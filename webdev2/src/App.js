@@ -45,6 +45,25 @@ let media = {
     ]
 };
 
+
+const mediaData = {
+    img: [
+        {
+            name: "somepic",
+            path: "./media/img/somepic.jpg"
+        }
+    ],
+    audio: [
+        {
+            // id: 1,
+            name: "chant",
+            path: "./media/audio/chant.mp3"
+        }
+    ]
+};
+
+const hei = {hallo: "hei"};
+
 class App extends Component {
   constructor() {
     super();

@@ -33,11 +33,11 @@
 
 .DisplayTabs p {
   margin-right: 20px;
-  background-color: #335D8F;
+  background-color: #335d8f;
   color: whitesmoke;
   font-size: 25px;
   padding: 15px;
-  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .16);
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.16);
 }
 
 .picture {
