@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
         imgTheme: null,
         audioTheme: null,
-        textTheme: null,
+        textTheme: "haiku",
         tabSelected: null
     };
   }

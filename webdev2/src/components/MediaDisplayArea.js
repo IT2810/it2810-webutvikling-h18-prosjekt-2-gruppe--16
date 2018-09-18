@@ -2,23 +2,24 @@ import React, { Component } from "react";
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
 
-        };
-    }
 
     //render if props.displayNumber=props.tabSelected
     //https://reactjs.org/docs/conditional-rendering.html
+
+    componentWillMount(){
+        console.log(this.props.textTheme);
+    }
+
     render() {
         return (
             <div className="MediaWrap">
 
                 <h2>Artwork</h2>
+                <p>{this.props.displayNumber}</p>
                 {/*picture*
                 <Picture src={this.props} />
-                {/*text*/}
+                {/*text*
                 <Text type={"haiku"} number={1}/>
 
                 {/*Audio*
