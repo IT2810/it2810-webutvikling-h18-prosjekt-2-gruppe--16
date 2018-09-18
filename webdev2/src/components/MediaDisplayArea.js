@@ -23,7 +23,13 @@ class MediaDisplayArea extends Component {
 
                 <h2>Artwork: {this.props.img.name}</h2>
                 <Picture src={this.props.img.path} />
+
                 <p>{this.state.parsedText}</p>
+
+                {/*Audio*/}
+                <audio controls loop>
+                    <source src={this.props.audio.path} type="audio/mpeg" />
+                </audio>
 
             </div>
         );

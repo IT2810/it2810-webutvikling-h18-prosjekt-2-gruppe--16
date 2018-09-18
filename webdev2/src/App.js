@@ -55,7 +55,44 @@ let media = {
             path: "media/img/space/starman.jpeg"
         }
     ],
-    audio: [],
+    audio: [
+        {
+            path: 'media/audio/chants/bazoon.mp3'
+        },
+        {
+            path: 'media/audio/chants/chant.mp3'
+        },
+        {
+            path: 'media/audio/chants/fotball.mp3'
+        },
+        {
+            path: 'media/audio/chants/munk.mp3'
+        },
+        {
+            path: 'media/audio/eccentric/atmospheric_noises.mp3'
+        },
+        {
+            path: 'media/audio/eccentric/bass_drums.mp3'
+        },
+        {
+            path: 'media/audio/eccentric/random.mp3'
+        },
+        {
+            path: 'media/audio/eccentric/swingy_strings.mp3'
+        },
+        {
+            path: 'media/audio/musical/anthem.mp3'
+        },
+        {
+            path: 'media/audio/musical/beat.mp3'
+        },
+        {
+            path: 'media/audio/musical/beat2.mp3'
+        },
+        {
+            path: 'media/audio/musical/harmonic_guitar.mp3'
+        }
+    ],
     text: [
         {
             name: 'Haiku 1',
@@ -115,10 +152,13 @@ class App extends Component {
     super();
     this.state = {
       media: media,
+
       imgVar: 0,
+      audioVar: 0,
       textVar: 0,
 
       selectedImgTheme: 'nature',
+      selectedAudioTheme: 'chants',
       selectedTextTheme: 'haiku',
     };
   }
@@ -135,13 +175,17 @@ class App extends Component {
 
         <MediaDisplayArea
             img={this.state.media.img[this.state.imgVar]}
-            //audio={this.state.audio}
+            audio={this.state.media.audio[this.state.audioVar]}
             text={this.state.media.text[this.state.textVar]}
         />
 
         <MediaCategory
             imgTheme={this.state.selectedImgTheme}
             onImgRadioButtonClicked={this.handleImgThemeChange}
+
+            audioTheme={this.state.selectedAudioTheme}
+            onAudioRadioButtonClicked={this.handleAudioThemeChange}
+
             textTheme={this.state.selectedTextTheme}
             onTextRadioButtonClicked={this.handleTextThemeChange}
         />
@@ -151,6 +195,10 @@ class App extends Component {
 
     handleImgThemeChange = (changeEvent) => {
         this.setState ({selectedImgTheme: changeEvent.target.value});
+    };
+
+    handleAudioThemeChange = (changeEvent) => {
+        this.setState ({selectedAudioTheme: changeEvent.target.value});
     };
 
     handleTextThemeChange = (changeEvent) => {
@@ -165,6 +213,14 @@ class App extends Component {
             this.setState({imgVar: 4})
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 8})
+        }
+
+        if(this.state.selectedAudioTheme === 'chants') {
+            this.setState({audioVar: 0});
+        }else if(this.state.selectedAudioTheme === 'eccentric') {
+            this.setState({audioVar: 4})
+        }else if(this.state.selectedAudioTheme === 'musical') {
+            this.setState({audioVar: 8})
         }
 
         if(this.state.selectedTextTheme === 'haiku') {
@@ -185,6 +241,14 @@ class App extends Component {
             this.setState({imgVar: 9})
         }
 
+        if(this.state.selectedAudioTheme === 'chants') {
+            this.setState({audioVar: 1});
+        }else if(this.state.selectedAudioTheme === 'eccentric') {
+            this.setState({audioVar: 5})
+        }else if(this.state.selectedAudioTheme === 'musical') {
+            this.setState({audioVar: 9})
+        }
+
         if(this.state.selectedTextTheme === 'haiku') {
             this.setState({textVar: 1});
         }else if(this.state.selectedTextTheme === 'poem') {
@@ -203,6 +267,14 @@ class App extends Component {
             this.setState({imgVar: 10})
         }
 
+        if(this.state.selectedAudioTheme === 'chants') {
+            this.setState({audioVar: 2});
+        }else if(this.state.selectedAudioTheme === 'eccentric') {
+            this.setState({audioVar: 6})
+        }else if(this.state.selectedAudioTheme === 'musical') {
+            this.setState({audioVar: 10})
+        }
+
         if(this.state.selectedTextTheme === 'haiku') {
             this.setState({textVar: 2});
         }else if(this.state.selectedTextTheme === 'poem') {
@@ -219,6 +291,14 @@ class App extends Component {
             this.setState({imgVar: 7})
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 11})
+        }
+
+        if(this.state.selectedAudioTheme === 'chants') {
+            this.setState({audioVar: 3});
+        }else if(this.state.selectedAudioTheme === 'eccentric') {
+            this.setState({audioVar: 7})
+        }else if(this.state.selectedAudioTheme === 'musical') {
+            this.setState({audioVar: 11})
         }
 
         if(this.state.selectedTextTheme === 'haiku') {

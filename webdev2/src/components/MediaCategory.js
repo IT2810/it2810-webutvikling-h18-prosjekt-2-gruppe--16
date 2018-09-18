@@ -5,6 +5,7 @@ class MediaCategory extends Component {
         return (
             <div className="MediaCategory">
 
+                <h3>Bildetema</h3>
                 <form>
                     <div className="radio">
                         <label>
@@ -30,13 +31,33 @@ class MediaCategory extends Component {
                 </form>
 
 
-                <h3>Audio</h3>
+                <h3>Lydtema</h3>
+                <form>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="chants" checked={this.props.audioTheme === 'chants'}
+                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                            Chant'er
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="eccentric" checked={this.props.audioTheme === 'eccentric'}
+                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                            Eksentrisk
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="musical" checked={this.props.audioTheme === 'musical'}
+                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                            Musikal
+                        </label>
+                    </div>
+                </form>
 
 
-
-
-
-                <h3>Text</h3>
+                <h3>Teksttema</h3>
                 <form>
                     <div className="radio">
                         <label>
