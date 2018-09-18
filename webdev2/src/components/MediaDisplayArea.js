@@ -1,35 +1,31 @@
 import React, { Component } from "react";
-import Picture from "./Picture";
+
 
 class MediaDisplayArea extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            parsedText: '',
-            path: this.props.text.path
+
         };
     }
 
-    componentDidUpdate() {
-        fetch(this.props.text.path)
-            .then(r => r.text()) //this code line need to 'write' lines into the variable
-            //we need to parse the text into lines
-            .then(text => this.setState({ parsedText: text }));
-    }
-
+    //render if props.displayNumber=props.tabSelected
+    //https://reactjs.org/docs/conditional-rendering.html
     render() {
         return (
             <div className="MediaWrap">
 
-                <h2>Artwork: {this.props.img.name}</h2>
-                <Picture src={this.props.img.path} />
+                <h2>Artwork</h2>
+                {/*picture*
+                <Picture src={this.props} />
+                {/*text*/}
 
-                <p>{this.state.parsedText}</p>
 
-                {/*Audio*/}
+                {/*Audio*
                 <audio controls loop>
                     <source src={this.props.audio.path} type="audio/mpeg" />
                 </audio>
+                */}
 
             </div>
         );
