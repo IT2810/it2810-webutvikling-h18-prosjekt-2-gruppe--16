@@ -46,8 +46,6 @@ let media = {
 };
 
 
-
-
 class App extends Component {
   constructor() {
     super();
@@ -55,6 +53,8 @@ class App extends Component {
       media: media,
       imgVar: 0,
       textVar: 0,
+
+      selectedImgTheme: 'space',
     };
   }
   render() {
@@ -75,24 +75,15 @@ class App extends Component {
         />
 
         <MediaCategory
-            onRadioButtonClicked={this.handleRadioButtons}
+            imgTheme={this.state.selectedImgTheme}
+            onImgRadioButtonClicked={this.handleImgThemeChange}
         />
       </div>
     );
   }
 
-    handleRadioButtons = () => {
-        var rad = document.myForm.myRadios;
-        var prev = null;
-        for(var i = 0; i < rad.length; i++) {
-            rad[i].onclick = function() {
-                (prev)? console.log(prev.value):null;
-                if(this !== prev) {
-                    prev = this;
-                }
-                console.log(this.value)
-            };
-        }
+    handleImgThemeChange = (changeEvent) => {
+        this.setState ({selectedImgTheme: changeEvent.target.value});
     };
 
     showTab1 = () => {

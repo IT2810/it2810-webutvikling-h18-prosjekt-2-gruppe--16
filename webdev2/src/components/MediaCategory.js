@@ -5,16 +5,28 @@ class MediaCategory extends Component {
         return (
             <div className="MediaCategory">
 
-                <form name="myForm">
-                    <fieldset>
-                        <legend><strong>Velg et bildetema</strong></legend>
-                        <input type="radio" name="my_options" value="huey" onClick="" />
-
-                        <input type="radio" name="my_options" value="dewey" onClick="" />
-
-                        <input type="radio" name="my_options" value="louie" onClick="" />
-
-                    </fieldset>
+                <form>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="nature" checked={this.props.imgTheme === 'nature'}
+                                   onChange={this.props.onImgRadioButtonClicked}/>
+                            Natur
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="social" checked={this.props.imgTheme === 'social'}
+                                   onChange={this.props.onImgRadioButtonClicked}/>
+                            Sosialt
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="space" checked={this.props.imgTheme === 'space'}
+                                   onChange={this.props.onImgRadioButtonClicked}/>
+                            Verdensrommet
+                        </label>
+                    </div>
                 </form>
 
 
@@ -27,6 +39,7 @@ class MediaCategory extends Component {
 
         );
     }
+
 }
 
 export default MediaCategory;
