@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Text from "./Text";
 
 class MediaDisplayArea extends Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class MediaDisplayArea extends Component {
                 {/*picture*
                 <Picture src={this.props} />
                 {/*text*/}
-
+                <Text type={"haiku"} number={1}/>
 
                 {/*Audio*
                 <audio controls loop>
