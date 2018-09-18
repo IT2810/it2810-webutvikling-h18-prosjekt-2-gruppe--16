@@ -41,7 +41,7 @@ class App extends Component {
 
           { console.log(this.state.media.img) }
 
-          <Renderpic picture={ this.state.media.img[0].name } />
+          {/*<Renderpic picture={ this.state.media.img[0].name } /> this breakes the code, why is this on master?*/}
 
 
       </div>
