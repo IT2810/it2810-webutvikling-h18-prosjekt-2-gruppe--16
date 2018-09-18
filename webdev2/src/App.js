@@ -7,51 +7,51 @@ import MediaDisplayArea from "./components/MediaDisplayArea";
 let media = {
     img: [
         {
-            name: 'Light Cocktail lady',
+            name: 'A dam',
             path: 'media/img/nature/dam.jpeg'
         },
         {
-            name: 'somethimg',
+            name: 'This is Brodey',
             path: "media/img/nature/kangaroo.jpeg"
         },
         {
-            name: 'somethimg more',
+            name: 'Hi!',
             path: "media/img/nature/koala.jpeg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Stripes of road',
             path: "media/img/nature/road.jpeg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Light Cocktail lady',
             path: "media/img/sosial/1.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Friends',
             path: "media/img/sosial/2.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Leader pic',
             path: "media/img/sosial/3.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Not leader pic',
             path: "media/img/sosial/4.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Landing sequence',
             path: "media/img/space/curiosity_descent.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Dual landing',
             path: "media/img/space/dual_booster_landing.jpeg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Artist colony setup',
             path: "media/img/space/mars_landing.jpg"
         },
         {
-            name: 'somethimg morer',
+            name: 'Starman & Earth',
             path: "media/img/space/starman.jpeg"
         }
     ],
@@ -72,6 +72,38 @@ let media = {
         {
             name: 'Haiku 4',
             path: 'media/text/haiku/haiku4'
+        },
+        {
+            name: 'Poem 1',
+            path: 'media/text/poem/poem1'
+        },
+        {
+            name: 'Poem 2',
+            path: 'media/text/poem/poem2'
+        },
+        {
+            name: 'Poem 3',
+            path: 'media/text/poem/poem3'
+        },
+        {
+            name: 'Poem 4',
+            path: 'media/text/poem/poem4'
+        },
+        {
+            name: 'Songtext 1',
+            path: 'media/text/songtext/songtext1'
+        },
+        {
+            name: 'songtext 2',
+            path: 'media/text/songtext/songtext2'
+        },
+        {
+            name: 'songtext 3',
+            path: 'media/text/songtext/songtext3'
+        },
+        {
+            name: 'songtext 4',
+            path: 'media/text/songtext/songtext4'
         }
 
     ]
@@ -86,7 +118,8 @@ class App extends Component {
       imgVar: 0,
       textVar: 0,
 
-      selectedImgTheme: 'space',
+      selectedImgTheme: 'nature',
+      selectedTextTheme: 'haiku',
     };
   }
   render() {
@@ -109,6 +142,8 @@ class App extends Component {
         <MediaCategory
             imgTheme={this.state.selectedImgTheme}
             onImgRadioButtonClicked={this.handleImgThemeChange}
+            textTheme={this.state.selectedTextTheme}
+            onTextRadioButtonClicked={this.handleTextThemeChange}
         />
       </div>
     );
@@ -116,6 +151,10 @@ class App extends Component {
 
     handleImgThemeChange = (changeEvent) => {
         this.setState ({selectedImgTheme: changeEvent.target.value});
+    };
+
+    handleTextThemeChange = (changeEvent) => {
+        this.setState ({selectedTextTheme: changeEvent.target.value});
     };
 
 
@@ -127,6 +166,14 @@ class App extends Component {
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 8})
         }
+
+        if(this.state.selectedTextTheme === 'haiku') {
+            this.setState({textVar: 0});
+        }else if(this.state.selectedTextTheme === 'poem') {
+            this.setState({textVar: 4})
+        }else if(this.state.selectedTextTheme === 'songtext') {
+            this.setState({textVar: 8})
+        }
     };
 
     showTab2 = () => {
@@ -136,6 +183,14 @@ class App extends Component {
             this.setState({imgVar: 5})
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 9})
+        }
+
+        if(this.state.selectedTextTheme === 'haiku') {
+            this.setState({textVar: 1});
+        }else if(this.state.selectedTextTheme === 'poem') {
+            this.setState({textVar: 5})
+        }else if(this.state.selectedTextTheme === 'songtext') {
+            this.setState({textVar: 9})
         }
     };
 
@@ -147,6 +202,14 @@ class App extends Component {
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 10})
         }
+
+        if(this.state.selectedTextTheme === 'haiku') {
+            this.setState({textVar: 2});
+        }else if(this.state.selectedTextTheme === 'poem') {
+            this.setState({textVar: 6})
+        }else if(this.state.selectedTextTheme === 'songtext') {
+            this.setState({textVar: 10})
+        }
     };
 
     showTab4 = () => {
@@ -157,25 +220,17 @@ class App extends Component {
         }else if(this.state.selectedImgTheme === 'space') {
             this.setState({imgVar: 11})
         }
+
+        if(this.state.selectedTextTheme === 'haiku') {
+            this.setState({textVar: 3});
+        }else if(this.state.selectedTextTheme === 'poem') {
+            this.setState({textVar: 7})
+        }else if(this.state.selectedTextTheme === 'songtext') {
+            this.setState({textVar: 11})
+        }
     };
 
-    // showTab2 = () => {
-    //     this.setState({imgVar: 1});
-    //     this.setState({textVar: 1});
-    //
-    // };
-    //
-    // showTab3 = () => {
-    //     this.setState({imgVar: 2});
-    //     this.setState({textVar: 2});
-    //
-    // };
-    //
-    // showTab4 = () => {
-    //     this.setState({imgVar: 3});
-    //     this.setState({textVar: 3});
-    //
-    // };
+
 }
 
 export default App;

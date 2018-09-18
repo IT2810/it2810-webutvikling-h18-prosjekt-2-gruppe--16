@@ -31,9 +31,35 @@ class MediaCategory extends Component {
 
 
                 <h3>Audio</h3>
-                <input type="radio"/>
+
+
+
+
+
                 <h3>Text</h3>
-                <input type="radio"/>
+                <form>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="haiku" checked={this.props.textTheme === 'haiku'}
+                                   onChange={this.props.onTextRadioButtonClicked}/>
+                            Haiku
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="poem" checked={this.props.textTheme === 'poem'}
+                                   onChange={this.props.onTextRadioButtonClicked}/>
+                            Dikt
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="songtext" checked={this.props.textTheme === 'songtext'}
+                                   onChange={this.props.onTextRadioButtonClicked}/>
+                            Sangtekst
+                        </label>
+                    </div>
+                </form>
 
             </div>
 
