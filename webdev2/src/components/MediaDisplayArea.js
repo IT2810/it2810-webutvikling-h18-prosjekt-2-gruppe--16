@@ -42,8 +42,10 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-                        {this.props.imgTheme}
+
                     </p>
+                    <Text type={this.props.text} number={this.props.displayNumber}/>
+
 
                     {/*picture*
                     <Picture src={this.props} />
