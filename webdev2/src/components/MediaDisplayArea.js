@@ -2,35 +2,29 @@ import React, { Component } from "react";
 import Picture from "./Picture"
 import Text from "./Text";
 
-let hei=false;
-
 class MediaDisplayArea extends Component {
     //render if props.displayNumber=props.tabSelected
     //https://reactjs.org/docs/conditional-rendering.html
-
-
-    componentWillMount(){
-        if(this.props.displayNumber === this.props.tabSelected){
-            hei=true;
-        } else {
-            hei=false;
+    constructor(props){
+        super();
+        this.state ={
+            isEqual:false
         }
-
-
     }
-
-    componentWillUpdate(){
+    
+    componentWillReceiveProps(){
         if(this.props.displayNumber === this.props.tabSelected){
-            hei=true;
+            this.setState({isEqual:true})
         } else {
-            hei=false;
+            this.setState({isEqual:false})
         }
+        console.log('state ' + this.state.isEqual);
     }
 
 
 
     render() {
-        if(hei) {
+        if(this.state.isEqual) {
             return (
                 <div className="MediaWrap">
 
@@ -38,10 +32,7 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-                    </p>
                     <Text type={this.props.text} number={this.props.displayNumber}/>
-                     {this.props.img}
-                        <Picture type={this.props.img} number={this.props.tabSelected}/>
 
                     </p>
 

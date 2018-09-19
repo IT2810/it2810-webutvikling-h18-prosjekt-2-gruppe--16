@@ -4,12 +4,10 @@ const pStyle = {cursor: 'pointer'}
 
 
 class Tab extends Component {
-
   constructor(props){
     super();
     this.state ={
       tabSelected:null
-
     }
   }
 

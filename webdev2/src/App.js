@@ -11,7 +11,7 @@ class App extends Component {
         imgTheme: null,
         audioTheme: null,
         textTheme: "haiku",
-        tabSelected: null
+        tabSelected: 1
     };
   }
 
