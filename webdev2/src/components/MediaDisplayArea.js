@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Picture from "./Picture"
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
@@ -17,8 +18,7 @@ class MediaDisplayArea extends Component {
 
                 <h2>Artwork</h2>
                 <p>{this.props.displayNumber}</p>
-                {/*picture*
-                <Picture src={this.props} />
+                <Picture type={this.props.img} number={this.props.displayNumber} />
                 {/*text*
                 <Text type={"haiku"} number={1}/>
 
@@ -37,4 +37,3 @@ class MediaDisplayArea extends Component {
 }
 
 export default MediaDisplayArea;
-
