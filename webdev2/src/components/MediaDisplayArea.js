@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Picture from "./Picture"
 import Text from "./Text";
 
-let hei=true;
+let hei=false;
 
 class MediaDisplayArea extends Component {
     //render if props.displayNumber=props.tabSelected
@@ -10,9 +10,22 @@ class MediaDisplayArea extends Component {
 
 
     componentWillMount(){
+        if(this.props.displayNumber === this.props.tabSelected){
+            hei=true;
+        } else {
+            hei=false;
+        }
+
 
     }
 
+    componentWillUpdate(){
+        if(this.props.displayNumber === this.props.tabSelected){
+            hei=true;
+        } else {
+            hei=false;
+        }
+    }
 
 
 
@@ -24,24 +37,16 @@ class MediaDisplayArea extends Component {
                     <h2>Artwork</h2>
                     <p>
                         {this.props.displayNumber}
-                        {this.props.textTheme}
-                        {this.props.imgTheme}
                         {this.props.tabSelected}
+                        {this.props.img}
+                        <Picture type={this.props.img} number={this.props.tabSelected}/>
+
                     </p>
-
-                    {/*picture*
-                    <Picture src={this.props} />
-                    {/*text*
-                    <Text type={"haiku"} number={1}/>
-
-                    {/*Audio*
-                    <audio controls loop>
-                        <source src={this.props.audio.path} type="audio/mpeg" />
-                    </audio>
-                    */}
 
                 </div>
             );
+        } else {
+            return false
         }
     }
 

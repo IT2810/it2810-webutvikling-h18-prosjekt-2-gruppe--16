@@ -53,7 +53,7 @@ class MediaCategory extends Component {
                         </label>
                     </div>
                 </form>
-              
+
 
                 <h3>Lydtema</h3>
                 <form>
