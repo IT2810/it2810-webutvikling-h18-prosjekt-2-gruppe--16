@@ -15,6 +15,7 @@ class App extends Component {
     };
   }
 
+    //lifecycle lags behind with tabSelected
 
   render() {
     return (
@@ -85,6 +86,7 @@ class App extends Component {
       this.setState({
         tabSelected: newTab
       })
+      console.log(newTab);
     }
 
 

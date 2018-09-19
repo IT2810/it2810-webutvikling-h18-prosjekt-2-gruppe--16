@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Picture from "./Picture"
 import Text from "./Text";
 
-let hei=true;
+let hei=false;
 
 class MediaDisplayArea extends Component {
     //render if props.displayNumber=props.tabSelected
@@ -11,11 +11,25 @@ class MediaDisplayArea extends Component {
 
     componentWillMount(){
         console.log(this.props.textTheme);
-        console.log(this.props.displayNumber);
-        console.log(this.props.tabSelected);
+        console.log('dN willMount '+this.props.displayNumber);
+        console.log('tabS willMount '+this.props.tabSelected);
+        if(this.props.displayNumber === this.props.tabSelected){
+            hei=true;
+        } else {
+            hei=false;
+        }
 
     }
 
+    componentWillUpdate(){
+        console.log('dN willupdata '+this.props.displayNumber);
+        console.log('tabSelected willupdate '+this.props.tabSelected);
+        if(this.props.displayNumber === this.props.tabSelected){
+            hei=true;
+        } else {
+            hei=false;
+        }
+    }
 
 
 
@@ -27,7 +41,7 @@ class MediaDisplayArea extends Component {
                     <h2>Artwork</h2>
                     <p>
                         {this.props.displayNumber}
-                        {this.props.textTheme}
+                        {this.props.tabSelected}
                         {this.props.imgTheme}
                     </p>
 
@@ -44,6 +58,8 @@ class MediaDisplayArea extends Component {
 
                 </div>
             );
+        } else {
+            return false
         }
     }
 
