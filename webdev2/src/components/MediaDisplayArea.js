@@ -11,7 +11,7 @@ class MediaDisplayArea extends Component {
             isEqual:false
         }
     }
-    
+
     componentWillReceiveProps(){
         if(this.props.displayNumber === this.props.tabSelected){
             this.setState({isEqual:true})
@@ -32,10 +32,9 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-                    <Text type={this.props.text} number={this.props.displayNumber}/>
 
                     </p>
-
+                    <Text type={this.props.text} number={this.props.displayNumber}/>
                 </div>
             );
         } else {
