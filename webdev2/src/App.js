@@ -11,7 +11,7 @@ class App extends Component {
         imgTheme: null,
         audioTheme: null,
         textTheme: "haiku",
-        tabSelected: null
+        tabSelected: 1
     };
   }
   render() {
@@ -24,7 +24,6 @@ class App extends Component {
             <Tab setTab={this.setTab} tabTitle={'TAB 3'} value={3}/>
             <Tab setTab={this.setTab} tabTitle={'TAB 4'} value={4}/>
         </div>
-
           <MediaDisplayArea
               displayNumber={1}
               img={this.state.imgTheme}

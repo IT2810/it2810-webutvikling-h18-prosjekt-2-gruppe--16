@@ -1,11 +1,16 @@
-O snail
-Climb Mount Fuji,
-But slowly, slowly!
-
-Trusting the Buddha, good and bad,
-I bid farewell
-To the departing year.
-
-Everything I touch
-with tenderness, alas,
-pricks like a bramble.
+{
+    "headline": "Haiku 3",
+    "text": [
+        "O snail",
+        "Climb Mount Fuji,",
+        "But slowly, slowly!",
+        "",
+        "Trusting the Buddha, good and bad,",
+        "I bid farewell",
+        "To the departing year.",
+        "",
+        "Everything I touch",
+        "with tenderness, alas,",
+        "pricks like a bramble."
+    ]
+}
