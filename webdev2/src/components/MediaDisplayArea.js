@@ -18,7 +18,7 @@ class MediaDisplayArea extends Component {
 
                 <h2>Artwork</h2>
                 <p>{this.props.displayNumber}</p>
-                <Picture type={this.props.img} number={this.props.displayNumber} />
+                <Picture type={this.props.img}  number={this.props.displayNumber} />
                 {/*text*
                 <Text type={"haiku"} number={1}/>
 
