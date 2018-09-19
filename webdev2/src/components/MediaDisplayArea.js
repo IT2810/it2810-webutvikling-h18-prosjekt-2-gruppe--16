@@ -10,20 +10,16 @@ class MediaDisplayArea extends Component {
 
 
     componentWillMount(){
-        console.log(this.props.textTheme);
-        console.log('dN willMount '+this.props.displayNumber);
-        console.log('tabS willMount '+this.props.tabSelected);
         if(this.props.displayNumber === this.props.tabSelected){
             hei=true;
         } else {
             hei=false;
         }
 
+
     }
 
     componentWillUpdate(){
-        console.log('dN willupdata '+this.props.displayNumber);
-        console.log('tabSelected willupdate '+this.props.tabSelected);
         if(this.props.displayNumber === this.props.tabSelected){
             hei=true;
         } else {
@@ -42,21 +38,12 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-
                     </p>
                     <Text type={this.props.text} number={this.props.displayNumber}/>
+                     {this.props.img}
+                        <Picture type={this.props.img} number={this.props.tabSelected}/>
 
-
-                    {/*picture*
-                    <Picture src={this.props} />
-                    {/*text*
-                    <Text type={"haiku"} number={1}/>
-
-                    {/*Audio*
-                    <audio controls loop>
-                        <source src={this.props.audio.path} type="audio/mpeg" />
-                    </audio>
-                    */}
+                    </p>
 
                 </div>
             );

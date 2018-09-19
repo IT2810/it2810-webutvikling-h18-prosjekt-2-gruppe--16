@@ -1,6 +1,30 @@
 import React, { Component } from 'react';
 
 class MediaCategory extends Component {
+  constructor(){
+    super();
+    this.state={
+      image:null,
+      text:null,
+      audio:null,
+    }
+  }
+
+  onUpdateText(){
+      this.props.changeTextTheme(this.state.text)
+    }
+
+
+  onUpdateAudio(){
+    this.props.changeAudioTheme(this.state.audio)
+
+
+  }
+  onUpdateImg(){
+    this.props.changeImgTheme(this.state.image)
+
+  }
+
     render() {
         return (
             <div className="MediaCategory">
@@ -9,23 +33,23 @@ class MediaCategory extends Component {
                 <form>
                     <div className="radio">
                         <label>
-                            <input type="radio" value="nature" checked={this.props.imgTheme === 'nature'}
-                                   onChange={this.props.onImgRadioButtonClicked}/>
-                            Natur
+                            <input type="radio" value="circle" checked={this.props.imgTheme === 'circle'}
+                                   onChange={this.props.changeImgTheme}/>
+                            Circle
                         </label>
                     </div>
                     <div className="radio">
                         <label>
-                            <input type="radio" value="social" checked={this.props.imgTheme === 'social'}
-                                   onChange={this.props.onImgRadioButtonClicked}/>
-                            Sosialt
+                            <input type="radio" value="triangle" checked={this.props.imgTheme === 'triangle'}
+                                   onChange={this.props.changeImgTheme}/>
+                            triangle
                         </label>
                     </div>
                     <div className="radio">
                         <label>
-                            <input type="radio" value="space" checked={this.props.imgTheme === 'space'}
-                                   onChange={this.props.onImgRadioButtonClicked}/>
-                            Verdensrommet
+                            <input type="radio" value="square" checked={this.props.imgTheme === 'square'}
+                                   onChange={this.props.changeImgTheme}/>
+                            Square
                         </label>
                     </div>
                 </form>
@@ -36,21 +60,21 @@ class MediaCategory extends Component {
                     <div className="radio">
                         <label>
                             <input type="radio" value="chants" checked={this.props.audioTheme === 'chants'}
-                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                                   onChange={this.props.changeAudioTheme}/>
                             Chanter
                         </label>
                     </div>
                     <div className="radio">
                         <label>
                             <input type="radio" value="eccentric" checked={this.props.audioTheme === 'eccentric'}
-                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                                   onChange={this.props.changeAudioTheme}/>
                             Eksentrisk
                         </label>
                     </div>
                     <div className="radio">
                         <label>
                             <input type="radio" value="musical" checked={this.props.audioTheme === 'musical'}
-                                   onChange={this.props.onAudioRadioButtonClicked}/>
+                                   onChange={this.props.changeAudioTheme}/>
                             Musikal
                         </label>
                     </div>
@@ -62,21 +86,21 @@ class MediaCategory extends Component {
                     <div className="radio">
                         <label>
                             <input type="radio" value="haiku" checked={this.props.textTheme === 'haiku'}
-                                   onChange={this.props.onTextRadioButtonClicked}/>
+                                   onChange={this.props.changeTextTheme}/>
                             Haiku
                         </label>
                     </div>
                     <div className="radio">
                         <label>
                             <input type="radio" value="poem" checked={this.props.textTheme === 'poem'}
-                                   onChange={this.props.onTextRadioButtonClicked}/>
+                                   onChange={this.props.changeTextTheme}/>
                             Dikt
                         </label>
                     </div>
                     <div className="radio">
                         <label>
                             <input type="radio" value="songtext" checked={this.props.textTheme === 'songtext'}
-                                   onChange={this.props.onTextRadioButtonClicked}/>
+                                   onChange={this.props.changeTextTheme}/>
                             Sangtekst
                         </label>
                     </div>
