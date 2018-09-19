@@ -26,7 +26,6 @@ class App extends Component {
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 3'} value={3}/>
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 4'} value={4}/>
         </div>
-
           <MediaDisplayArea
               displayNumber={1}
               img={this.state.imgTheme}
