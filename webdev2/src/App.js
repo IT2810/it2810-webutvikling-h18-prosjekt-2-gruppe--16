@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Art gallery </h1>
+        <h1>Art gallery {this.state.textTheme} {this.state.audioTheme} {this.state.imgTheme}</h1>
         <div className="DisplayTabs">
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>
@@ -57,27 +57,27 @@ class App extends Component {
 
         <MediaCategory
             imgTheme={this.state.imgTheme}
-            onImgRadioButtonClicked={this.handleImgThemeChange}
+            changeImgTheme={this.onChangeImgTheme.bind(this)}
 
             audioTheme={this.state.audioTheme}
-            onAudioRadioButtonClicked={this.handleAudioThemeChange}
+            changeAudioTheme={this.onChangeAudioTheme.bind(this)}
 
             textTheme={this.state.textTheme}
-            onTextRadioButtonClicked={this.handleTextThemeChange}
+            changeTextTheme={this.onChangeTextTheme.bind(this)}
         />
       </div>
     );
   }
 
-    handleImgThemeChange = (changeEvent) => {
+    onChangeImgTheme = (changeEvent) => {
         this.setState ({imgTheme: changeEvent.target.value});
     };
 
-    handleAudioThemeChange = (changeEvent) => {
+    onChangeAudioTheme = (changeEvent) => {
         this.setState ({audioTheme: changeEvent.target.value});
     };
 
-    handleTextThemeChange = (changeEvent) => {
+    onChangeTextTheme = (changeEvent) => {
         this.setState ({textTheme: changeEvent.target.value});
     };
 

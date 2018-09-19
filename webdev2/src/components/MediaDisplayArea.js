@@ -10,9 +10,6 @@ class MediaDisplayArea extends Component {
 
 
     componentWillMount(){
-        console.log(this.props.textTheme);
-        console.log(this.props.displayNumber);
-        console.log(this.props.tabSelected);
 
     }
 
@@ -29,6 +26,7 @@ class MediaDisplayArea extends Component {
                         {this.props.displayNumber}
                         {this.props.textTheme}
                         {this.props.imgTheme}
+                        {this.props.tabSelected}
                     </p>
 
                     {/*picture*
