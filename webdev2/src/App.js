@@ -11,7 +11,7 @@ class App extends Component {
         imgTheme: null,
         audioTheme: null,
         textTheme: "haiku",
-        tabSelected: 1
+        tabSelected: null
     };
   }
 
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Art gallery {this.state.tabSelected} </h1>
+        <h1>Art gallery </h1>
         <div className="DisplayTabs">
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>

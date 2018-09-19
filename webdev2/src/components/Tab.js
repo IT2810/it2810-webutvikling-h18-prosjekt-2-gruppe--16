@@ -13,6 +13,10 @@ class Tab extends Component {
     }
   }
 
+  componentWillMount(){
+    this.setState({tabSelected:this.props.value})
+  }
+
   componentDidUpdate(){
     if (this.props.value !== this.state.tabSelected){
 
