@@ -11,7 +11,7 @@ class App extends Component {
         imgTheme: "circle",
         audioTheme: "chants",
         textTheme: "haiku",
-        tabSelected: 1
+        tabSelected: 3
     };
   }
 
@@ -22,44 +22,22 @@ class App extends Component {
       <div className="App">
         <h1>Art gallery</h1>
         <div className="DisplayTabs">
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 3'} value={3}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 4'} value={4}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} tabNumber={1}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} tabNumber={2}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 3'} tabNumber={3}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 4'} tabNumber={4}/>
         </div>
-          <MediaDisplayArea
-              displayNumber={1}
-              img={this.state.imgTheme}
-              audioTheme={this.state.audioTheme}
-              text={this.state.textTheme}
-              tabSelected={this.state.tabSelected}
-          />
-          <MediaDisplayArea
-              displayNumber={2}
-              img={this.state.imgTheme}
-              audioTheme={this.state.audioTheme}
-              text={this.state.textTheme}
-              tabSelected={this.state.tabSelected}
-          />
-          <MediaDisplayArea
-              displayNumber={3}
-              img={this.state.imgTheme}
-              audioTheme={this.state.audioTheme}
-              text={this.state.textTheme}
-              tabSelected={this.state.tabSelected}
-          />
-          <MediaDisplayArea
-              displayNumber={4}
-              img={this.state.imgTheme}
-              audioTheme={this.state.audioTheme}
-              text={this.state.textTheme}
-              tabSelected={this.state.tabSelected}
-          />
+
+        <MediaDisplayArea
+            tabSelected={this.state.tabSelected}
+            imgTheme={this.state.imgTheme}
+            audioTheme={this.state.audioTheme}
+            textTheme={this.state.textTheme}
+        />
 
         <MediaCategory
             imgTheme={this.state.imgTheme}
             changeImgTheme={this.onChangeImgTheme.bind(this)}
-
 
             audioTheme={this.state.audioTheme}
             changeAudioTheme={this.onChangeAudioTheme.bind(this)}
@@ -84,13 +62,10 @@ class App extends Component {
     };
 
     onChangeTab(newTab){
-      this.setState({
+        this.setState({
         tabSelected: newTab
-      });
-
+        });
     }
-
-
 }
 
 export default App;

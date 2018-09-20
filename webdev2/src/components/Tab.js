@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
 
-const pointerStyle = {cursor: 'pointer'}
+const pointerStyle = {cursor: 'pointer'};
 
 
 class Tab extends Component {
   constructor(props){
-    super();
+    super(props);
     this.state ={
-      tabSelected:null
+      tabSelected: null
     }
   }
 
-  componentWillMount(){
-    this.setState({tabSelected:this.props.value})
-  }
-
-  componentDidUpdate(){
-    if (this.props.value !== this.state.tabSelected){
-      this.setState({tabSelected:this.props.value})}
-  }
-  onUpdateTab(){
-    this.props.changeTab(this.state.tabSelected)
+  componentDidMount(){
+    this.setState({tabSelected: this.props.tabNumber})
   }
 
     render() {
@@ -32,6 +24,10 @@ class Tab extends Component {
               {this.props.tabTitle}
             </p>
         );
+    }
+
+    onUpdateTab = () => {
+        this.props.changeTab(this.state.tabSelected)
     }
 }
 

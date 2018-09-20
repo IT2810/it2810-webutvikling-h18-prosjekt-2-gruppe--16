@@ -4,44 +4,26 @@ import Audio from "./Audio"
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
-    //render if props.displayNumber=props.tabSelected
-    //https://reactjs.org/docs/conditional-rendering.html
-    constructor(props){
-        super();
-        this.state ={
-            isEqual:false
-        }
-    }
-
-    componentWillReceiveProps(){
-        if(this.props.displayNumber === this.props.tabSelected){
-            this.setState({isEqual:true})
-        } else {
-            this.setState({isEqual:false})
-        }
-    }
-
-
 
     render() {
-        if(this.state.isEqual) {
-            return (
-                <div className="MediaWrap">
+        return (
+            <div className="MediaWrap">
 
-                    <h2>Artwork</h2>
-                    <p>
-                        {this.props.displayNumber}
-                        {this.props.tabSelected}
-                    </p>
-                    <Text type={this.props.text} number={this.props.tabSelected}/>
-                    <Picture type={this.props.img} number={this.props.tabSelected}/>
-                    <Audio type={this.props.audioTheme} number={this.props.tabSelected}/>
+                <h2>Artwork</h2>
+                <p>
+                    tabSelected: {this.props.tabSelected} <br/>
+                    textTheme: {this.props.textTheme}<br/>
+                    imgTheme: {this.props.imgTheme}<br/>
+                    audioTheme: {this.props.audioTheme}
+                </p>
 
-                </div>
-            );
-        } else {
-            return false
-        }
+                {/*Alt annet (over) oppdateres, men av en eller anne grunn, blir ikke media (under) oppdatert...*/}
+                <Text type={this.props.textTheme} number={this.props.tabSelected}/>
+                <Picture type={this.props.imgTheme} number={this.props.tabSelected}/>
+                <Audio type={this.props.audioTheme} number={this.props.tabSelected}/>
+
+            </div>
+        );
     }
 }
 
