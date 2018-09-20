@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Picture from "./Picture"
+import Audio from "./Audio"
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
@@ -35,6 +35,8 @@ class MediaDisplayArea extends Component {
 
                     </p>
                     <Text type={this.props.text} number={this.props.displayNumber}/>
+
+                    <Audio />
                 </div>
             );
         } else {

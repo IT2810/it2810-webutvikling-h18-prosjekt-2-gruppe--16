@@ -17,14 +17,12 @@ class Tab extends Component {
 
   componentDidUpdate(){
     if (this.props.value !== this.state.tabSelected){
-
-    this.setState({tabSelected:this.props.value})}
+      this.setState({tabSelected:this.props.value})}
   }
-    onUpdateTab(){
+  onUpdateTab(){
+    this.props.changeTab(this.state.tabSelected)
+  }
 
-      this.props.changeTab(this.state.tabSelected)
-
-    }
     render() {
         return (
             <p
