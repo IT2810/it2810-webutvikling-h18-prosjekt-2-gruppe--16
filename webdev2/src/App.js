@@ -87,6 +87,7 @@ class App extends Component {
       this.setState({
         tabSelected: newTab
       });
+
     }
 
 

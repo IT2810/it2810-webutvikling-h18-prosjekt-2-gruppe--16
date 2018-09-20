@@ -31,17 +31,17 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-
                     </p>
                     <Text type={this.props.text} number={this.props.tabSelected}/>
+
+                    <Picture type={this.props.img} number={this.props.tabSelected}/>
+
                 </div>
             );
         } else {
             return false
         }
     }
-
-
 }
 
 export default MediaDisplayArea;
