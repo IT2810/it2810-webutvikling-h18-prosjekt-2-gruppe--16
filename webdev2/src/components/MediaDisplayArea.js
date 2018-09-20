@@ -36,15 +36,13 @@ class MediaDisplayArea extends Component {
                     </p>
                     <Text type={this.props.text} number={this.props.displayNumber}/>
 
-                    <Audio />
+                    <Audio type={this.props.audioTheme} number={this.props.displayNumber}/>
                 </div>
             );
         } else {
             return false
         }
     }
-
-
 }
 
 export default MediaDisplayArea;
