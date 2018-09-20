@@ -5,7 +5,7 @@ class Picture extends Component {
         super(props);
         this.state = {
             svg: null,
-            path: "media/picture/" + props.type + "/" + props.number +".svg"  //type= haiku/poem/songtext number=1-4 //use this to make text array https://delim.co/#
+            path: "media/picture/" + props.type + "/" + props.type + props.number +".svg"  //type= haiku/poem/songtext number=1-4 //use this to make text array https://delim.co/#
         };
     }
 
