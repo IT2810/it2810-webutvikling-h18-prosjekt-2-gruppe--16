@@ -28,11 +28,6 @@ class MediaDisplayArea extends Component {
                 <div className="MediaWrap">
 
                     <h2>Artwork</h2>
-                    <p>
-                        {this.props.displayNumber}
-                        {this.props.tabSelected}
-
-                    </p>
                     <Text type={this.props.text} number={this.props.tabSelected}/>
                 </div>
             );

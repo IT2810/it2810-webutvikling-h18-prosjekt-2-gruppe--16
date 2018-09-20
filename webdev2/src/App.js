@@ -11,11 +11,15 @@ class App extends Component {
         imgTheme: null,
         audioTheme: null,
         textTheme: null,
-        tabSelected: 1
+        tabSelected: null,
+        storage:[]
     };
   }
 
-    //lifecycle lags behind with tabSelected
+  componentWillUpdate(nextProps,nextState){
+    sessionStorage.setItem("storage",JSON.stringify(nextState.storage))
+    localStorage.setItem("storage", JSON.stringify(imgTheme))
+  }
 
   render() {
     return (
@@ -88,7 +92,6 @@ class App extends Component {
         tabSelected: newTab
       });
     }
-
 
 }
 
