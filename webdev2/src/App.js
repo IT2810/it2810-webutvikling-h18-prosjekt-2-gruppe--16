@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
         imgTheme: null,
-        audioTheme: "chants",
+        audioTheme: null,
         textTheme: "haiku",
         tabSelected: 1
     };
