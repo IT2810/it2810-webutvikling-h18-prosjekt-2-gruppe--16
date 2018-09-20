@@ -30,28 +30,28 @@ class App extends Component {
           <MediaDisplayArea
               displayNumber={1}
               img={this.state.imgTheme}
-              audio={this.state.audioTheme}
+              audioTheme={this.state.audioTheme}
               text={this.state.textTheme}
               tabSelected={this.state.tabSelected}
           />
           <MediaDisplayArea
               displayNumber={2}
               img={this.state.imgTheme}
-              audio={this.state.audioTheme}
+              audioTheme={this.state.audioTheme}
               text={this.state.textTheme}
               tabSelected={this.state.tabSelected}
           />
           <MediaDisplayArea
               displayNumber={3}
               img={this.state.imgTheme}
-              audio={this.state.audioTheme}
+              audioTheme={this.state.audioTheme}
               text={this.state.textTheme}
               tabSelected={this.state.tabSelected}
           />
           <MediaDisplayArea
               displayNumber={4}
               img={this.state.imgTheme}
-              audio={this.state.audioTheme}
+              audioTheme={this.state.audioTheme}
               text={this.state.textTheme}
               tabSelected={this.state.tabSelected}
           />
