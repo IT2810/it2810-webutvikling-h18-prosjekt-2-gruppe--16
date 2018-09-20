@@ -18,7 +18,6 @@ class MediaDisplayArea extends Component {
         } else {
             this.setState({isEqual:false})
         }
-        console.log('state ' + this.state.isEqual);
     }
 
 
@@ -34,7 +33,7 @@ class MediaDisplayArea extends Component {
                         {this.props.tabSelected}
 
                     </p>
-                    <Text type={this.props.text} number={this.props.displayNumber}/>
+                    <Text type={this.props.text} number={this.props.tabSelected}/>
                 </div>
             );
         } else {

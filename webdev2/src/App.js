@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
         imgTheme: null,
         audioTheme: null,
-        textTheme: "haiku",
+        textTheme: null,
         tabSelected: 1
     };
   }
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Art gallery {this.state.textTheme} {this.state.audioTheme} {this.state.imgTheme}</h1>
+        <h1>Art gallery</h1>
         <div className="DisplayTabs">
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>
@@ -87,7 +87,6 @@ class App extends Component {
       this.setState({
         tabSelected: newTab
       });
-      console.log('app.js ' + this.state.tabSelected);
     }
 
 
