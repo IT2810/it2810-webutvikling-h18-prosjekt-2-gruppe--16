@@ -86,7 +86,6 @@ class App extends Component {
       this.setState({
         tabSelected: newTab
       })
-      console.log('app.js ' + this.state.tabSelected);
     }
 
 

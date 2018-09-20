@@ -18,7 +18,6 @@ class MediaDisplayArea extends Component {
         } else {
             this.setState({isEqual:false})
         }
-        console.log('state ' + this.state.isEqual);
     }
 
 
@@ -32,8 +31,8 @@ class MediaDisplayArea extends Component {
                     <p>
                         {this.props.displayNumber}
                         {this.props.tabSelected}
-
                     </p>
+                    <Picture type={this.props.img} number={this.props.displayNumber}/>
                     <Text type={this.props.text} number={this.props.displayNumber}/>
                 </div>
             );
@@ -41,8 +40,6 @@ class MediaDisplayArea extends Component {
             return false
         }
     }
-
-
 }
 
 export default MediaDisplayArea;

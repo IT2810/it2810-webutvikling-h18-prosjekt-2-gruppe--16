@@ -12,14 +12,13 @@ class Picture extends Component {
     componentDidMount(){
         fetch(this.state.path)
           .then(response => response.text())
-          .then(svg => document.body.insertAdjacentHTML("afterbegin", svg));
+          .then(response => this.setState({svg:response}))
         }
+
 
     render() {
         return (
-            <div className="Picture">
-                <div src={this.state.svg}/>
-            </div>
+            <div className="Picture" dangerouslySetInnerHTML={{__html:this.state.svg}}/>
         );
     }
 }
