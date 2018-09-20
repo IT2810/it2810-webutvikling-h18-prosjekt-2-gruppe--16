@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Picture from "./Picture"
+import Audio from "./Audio"
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
@@ -33,8 +33,8 @@ class MediaDisplayArea extends Component {
                         {this.props.tabSelected}
                     </p>
                     <Text type={this.props.text} number={this.props.tabSelected}/>
-
                     <Picture type={this.props.img} number={this.props.tabSelected}/>
+                    <Audio type={this.props.audioTheme} number={this.props.tabSelected}/>
 
                 </div>
             );

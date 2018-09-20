@@ -61,7 +61,7 @@ class MediaCategory extends Component {
                         <label>
                             <input type="radio" value="chants" checked={this.props.audioTheme === 'chants'}
                                    onChange={this.props.changeAudioTheme}/>
-                            Chanter
+                            Chant'er
                         </label>
                     </div>
                     <div className="radio">
