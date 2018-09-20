@@ -33,10 +33,10 @@ class MediaDisplayArea extends Component {
                         {this.props.displayNumber}
                         {this.props.tabSelected}
                     </p>
-                    <Picture type={this.props.img} number={this.props.displayNumber}/>
-                    <Text type={this.props.text} number={this.props.displayNumber}/>
+                    <Text type={this.props.text} number={this.props.tabSelected}/>
+                    <Picture type={this.props.img} number={this.props.tabSelected}/>
+                    <Audio type={this.props.audioTheme} number={this.props.tabSelected}/>
 
-                    <Audio type={this.props.audioTheme} number={this.props.displayNumber}/>
                 </div>
             );
         } else {
