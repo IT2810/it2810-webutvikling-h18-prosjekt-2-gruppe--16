@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        imgTheme: null,
+        imgTheme: "circle",
         audioTheme: null,
         textTheme: "haiku",
         tabSelected: 1
@@ -86,7 +86,6 @@ class App extends Component {
       this.setState({
         tabSelected: newTab
       })
-      console.log('app.js ' + this.state.tabSelected);
     }
 
 
