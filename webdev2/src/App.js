@@ -12,13 +12,11 @@ class App extends Component {
         audioTheme: null,
         textTheme: null,
         tabSelected: null,
-        storage:[]
     };
   }
 
   componentWillUpdate(nextProps,nextState){
-    sessionStorage.setItem("storage",JSON.stringify(nextState.storage))
-    localStorage.setItem("storage", JSON.stringify(imgTheme))
+    localStorage.setItem("storage", JSON.stringify(nextState.tabSelected ))
   }
 
   render() {
