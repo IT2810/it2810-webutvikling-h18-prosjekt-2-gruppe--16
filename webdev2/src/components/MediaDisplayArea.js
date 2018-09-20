@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Picture from "./Picture"
 import Audio from "./Audio"
 import Text from "./Text";
 
