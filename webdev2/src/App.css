@@ -21,7 +21,7 @@
 
 .MediaWrap {
   grid-area: content;
-  justify-self: center;
+  justify-self: stretch;
 }
 
 .DisplayTabs {
