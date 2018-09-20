@@ -6,7 +6,7 @@ class Text extends Component {
         this.state = {
             headline: null,
             text: null,
-            path: "media/text/" + props.type + "/" + props.type + props.number   //type= haiku/poem/songtext number=1-4 //use this to make text array https://delim.co/#
+            path: "media/text/" + props.type + "/" + props.type + props.number
         };
     }
 

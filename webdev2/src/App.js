@@ -8,9 +8,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-        imgTheme: null,
-        audioTheme: null,
-        textTheme: null,
+        imgTheme: "circle",
+        audioTheme: "chants",
+        textTheme: "haiku",
         tabSelected: 1
     };
   }

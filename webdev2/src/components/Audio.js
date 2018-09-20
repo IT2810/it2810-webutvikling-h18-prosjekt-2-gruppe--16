@@ -11,7 +11,7 @@ class Audio extends Component {
     render() {
         return (
             <div className="Audio">
-                <audio controls autoPlay loop>
+                <audio controls loop>
                     <source src={this.state.path} type="audio/mpeg" />
                 </audio>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const pStyle = {cursor: 'pointer'}
+const pointerStyle = {cursor: 'pointer'}
 
 
 class Tab extends Component {
@@ -26,10 +26,11 @@ class Tab extends Component {
     render() {
         return (
             <p
-            onClick={this.onUpdateTab.bind(this)}
-            value={this.props.value}
-            style={pStyle}>{this.props.tabTitle}
-            </p> //this is a callback function that passes the value of the tab
+              onClick={this.onUpdateTab.bind(this)}
+              style={pointerStyle}
+            >
+              {this.props.tabTitle}
+            </p>
         );
     }
 }
