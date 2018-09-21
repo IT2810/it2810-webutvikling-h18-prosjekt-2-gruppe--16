@@ -10,11 +10,32 @@ class Text extends Component {
         };
     }
 
+    //This ensures that the state is updated when the props changes. And thus the componentDidUpdate is activated.
+    static getDerivedStateFromProps(props, state) {
+        return{
+            path: "media/text/" + props.type + "/" + props.type + props.number
+        };
+    }
+
+    //this fetches the text when a text component is created. this ensures that all the mediaDisplayAreas have a text when category is updated
+    //the json is paresed in to headline and text, where text is an array that is joined with linebreakes
     componentDidMount(){
         fetch(this.state.path)
             .then(response => response.json())
-            //.then(log => console.log(log.text.join('\n')))
-            //note to self: don't console log any data before this point it breaks the code by ending the stream
+            .then(response =>
+                this.setState({headline:response.headline, text:response.text.join('\n')})
+            )
+            .catch(error => {
+                console.error(error);
+            })
+
+    }
+
+    //this fetches a new text when this component is updated, when the path is updated.
+    //the json is paresed in to headline and text, where text is an array that is joined with linebreakes
+    componentDidUpdate(){
+        fetch(this.state.path)
+            .then(response => response.json())
             .then(response =>
                 this.setState({headline:response.headline, text:response.text.join('\n')})
             )

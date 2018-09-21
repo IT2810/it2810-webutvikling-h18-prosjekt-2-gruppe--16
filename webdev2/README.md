@@ -1,5 +1,6 @@
-This is a group project in IT2810 at NTNU.
+This is the second project of group 16 in the course IT2810 at NTNU.
 
+Documentation:
 
 Måten vi har valgt å bygge SPAen vår er basert på konseptene som React legger opp til. Vi setter sammen mindre komponenter til større komponenter som igjen settes sammen til å lage en fullstendig nettside. De grunnleggende komponentene våre er ment i så stor grad som mulig å være bygget av data som blir gitt til dem fra foreldrene sine, slik at appen i så stor grad som mulig skal kunne økes i omfang dynamisk etter behov. Foreldrekompontene er i så stor grad som mulig igjen da bygget av sammensetninger av mindre komponenter.
 
@@ -31,6 +32,3 @@ Måten vi løste bildene var gjennom en veldig enkel mappestruktur, der bildene 
 Det er et krav vi ikke har innfridd og det er kravet om lokallagring, grunnet blant annet utlandsopphold og noe sykdom i gruppen så ble den siste funksjonen aldri fullført. Grunnen til at dette ble den funksjonen som ikke ble fullført var fordi den ble ansatt som ikke-essensiell for de andre funksjonene i systemet. Dermed kunne den bli "utsatt" til slutten av prosjektet. Skulle vi gjennomført den vil vi anvendt localStorage.x funksjonene til å bygge et enkelt system for å lagre til lokalminnnet.  
 
 
-
-
-Link to hours worked: https://docs.google.com/spreadsheets/d/1p9pLlhXYHj3e3FnndWveyQrbDi2-RuWTf4lVoRMdHQ4/edit#gid=0

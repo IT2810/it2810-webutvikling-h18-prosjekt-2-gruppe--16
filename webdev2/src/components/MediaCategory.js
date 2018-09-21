@@ -1,30 +1,7 @@
 import React, { Component } from 'react';
 
 class MediaCategory extends Component {
-  constructor(){
-    super();
-    this.state={
-      image:null,
-      text:null,
-      audio:null,
-    }
-  }
-
-  onUpdateText(){
-      this.props.changeTextTheme(this.state.text)
-    }
-
-
-  onUpdateAudio(){
-    this.props.changeAudioTheme(this.state.audio)
-
-
-  }
-  onUpdateImg(){
-    this.props.changeImgTheme(this.state.image)
-
-  }
-
+    //when a radio button is pressed the category choice is passed back up to app via callback functions
     render() {
         return (
             <div className="MediaCategory">
@@ -61,7 +38,7 @@ class MediaCategory extends Component {
                         <label>
                             <input type="radio" value="chants" checked={this.props.audioTheme === 'chants'}
                                    onChange={this.props.changeAudioTheme}/>
-                            Chanter
+                            Chant'er
                         </label>
                     </div>
                     <div className="radio">
