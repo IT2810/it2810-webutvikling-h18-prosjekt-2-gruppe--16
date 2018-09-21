@@ -4,8 +4,6 @@ import Audio from "./Audio"
 import Text from "./Text";
 
 class MediaDisplayArea extends Component {
-    //render if props.displayNumber=props.tabSelected
-    //https://reactjs.org/docs/conditional-rendering.html
     constructor(props){
         super();
         this.state ={
@@ -13,15 +11,17 @@ class MediaDisplayArea extends Component {
         }
     }
 
-    componentWillReceiveProps(){
-        if(this.props.displayNumber === this.props.tabSelected){
-            this.setState({isEqual:true})
+    static getDerivedStateFromProps(props, state) {
+        if(props.displayNumber === props.tabSelected) {
+            return{
+                isEqual:true
+            };
         } else {
-            this.setState({isEqual:false})
+            return{
+                isEqual:false
+            };
         }
     }
-
-
 
     render() {
         if(this.state.isEqual) {
@@ -29,13 +29,12 @@ class MediaDisplayArea extends Component {
                 <div className="MediaWrap">
 
                     <h2>Artwork</h2>
-                    <p>
-                        {this.props.displayNumber}
-                        {this.props.tabSelected}
-                    </p>
-                    <Text type={this.props.text} number={this.props.tabSelected}/>
-                    <Picture type={this.props.img} number={this.props.tabSelected}/>
-                    <Audio type={this.props.audioTheme} number={this.props.tabSelected}/>
+                    <p>This is the loaded tab: {this.props.displayNumber}</p>
+                    <p>This is the state true false state for the tab loaded: {this.state.isEqual.toString()}</p>
+                    <p>This is the selected tab: {this.props.tabSelected}</p>
+                    <Text type={this.props.text} number={this.props.displayNumber}/>
+                    <Picture type={this.props.img} number={this.props.displayNumber}/>
+                    <Audio type={this.props.audioTheme} number={this.props.displayNumber}/>
 
                 </div>
             );

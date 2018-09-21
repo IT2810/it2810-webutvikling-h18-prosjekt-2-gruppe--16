@@ -21,6 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Art gallery</h1>
+          <p>this is the selected tab in appjs {this.state.tabSelected}</p>
         <div className="DisplayTabs">
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
             <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>
