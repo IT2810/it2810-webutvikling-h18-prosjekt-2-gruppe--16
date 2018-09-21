@@ -17,16 +17,16 @@ class App extends Component {
 
     //lifecycle lags behind with tabSelected
 
+
   render() {
     return (
       <div className="App">
         <h1>Art gallery</h1>
-          <p>this is the selected tab in appjs {this.state.tabSelected}</p>
         <div className="DisplayTabs">
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 1'} value={1}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 2'} value={2}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 3'} value={3}/>
-            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'TAB 4'} value={4}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'Display 1'} value={1}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'Display 2'} value={2}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'Display 3'} value={3}/>
+            <Tab changeTab={this.onChangeTab.bind(this)} tabTitle={'Display 4'} value={4}/>
         </div>
           <MediaDisplayArea
               displayNumber={1}
@@ -60,7 +60,6 @@ class App extends Component {
         <MediaCategory
             imgTheme={this.state.imgTheme}
             changeImgTheme={this.onChangeImgTheme.bind(this)}
-
 
             audioTheme={this.state.audioTheme}
             changeAudioTheme={this.onChangeAudioTheme.bind(this)}

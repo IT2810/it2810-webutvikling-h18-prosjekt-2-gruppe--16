@@ -9,16 +9,31 @@ class Picture extends Component {
         };
     }
 
+    //This ensures that the state is updated when the props changes. And thus the componentDidUpdate is activated.
+    static getDerivedStateFromProps(props, state) {
+        return{
+            path: "media/picture/" + props.type + "/" + props.type + props.number +".svg"
+        };
+    }
+
+    //when a picture component is created it fetches the picture
+    //Without it the only the active mediaDisplayArea would be loaded
     componentDidMount(){
         fetch(this.state.path)
           .then(response => response.text())
           .then(response => this.setState({svg:response}))
         }
 
+    //when a the state of this picture component is updated a new picture is fetched
+    componentDidUpdate(){
+        fetch(this.state.path)
+            .then(response => response.text())
+            .then(response => this.setState({svg:response}))
+    }
 
     render() {
         return (
-            <div className="Picture" dangerouslySetInnerHTML={{__html:this.state.svg}}/>
+            <div dangerouslySetInnerHTML={{__html:this.state.svg}}/>
         );
     }
 }

@@ -27,15 +27,10 @@ class MediaDisplayArea extends Component {
         if(this.state.isEqual) {
             return (
                 <div className="MediaWrap">
-
                     <h2>Artwork</h2>
-                    <p>This is the loaded tab: {this.props.displayNumber}</p>
-                    <p>This is the state true false state for the tab loaded: {this.state.isEqual.toString()}</p>
-                    <p>This is the selected tab: {this.props.tabSelected}</p>
-                    <Text type={this.props.text} number={this.props.displayNumber}/>
-                    <Picture type={this.props.img} number={this.props.displayNumber}/>
-                    <Audio type={this.props.audioTheme} number={this.props.displayNumber}/>
-
+                    <Text className="Text" type={this.props.text} number={this.props.displayNumber}/>
+                    <Audio className="Audio" type={this.props.audioTheme} number={this.props.displayNumber}/>
+                    <Picture className="Picture" type={this.props.img} number={this.props.displayNumber}/>
                 </div>
             );
         } else {

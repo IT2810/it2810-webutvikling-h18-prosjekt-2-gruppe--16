@@ -1,30 +1,6 @@
 import React, { Component } from 'react';
 
 class MediaCategory extends Component {
-  constructor(){
-    super();
-    this.state={
-      image:null,
-      text:null,
-      audio:null,
-    }
-  }
-
-  onUpdateText(){
-      this.props.changeTextTheme(this.state.text)
-    }
-
-
-  onUpdateAudio(){
-    this.props.changeAudioTheme(this.state.audio)
-
-
-  }
-  onUpdateImg(){
-    this.props.changeImgTheme(this.state.image)
-
-  }
-
     render() {
         return (
             <div className="MediaCategory">
