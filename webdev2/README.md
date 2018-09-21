@@ -6,9 +6,14 @@ Node.js og NPM
 
 For å starte aplikasjonen lokalt kjør npm install og npm start
 
-Måten vi har valgt å bygge SPAen vår er basert på konseptene som React legger opp til. Vi setter sammen mindre komponenter til større komponenter som igjen settes sammen til å lage en fullstendig nettside. 
+Git 
+
+Vi har brukt git og github til å organisere og arbeide med koden. Alle jobber i en branch ut fra dev og når vi skal merge bruker vi pull request funksjonen i github, slik at andre i gruppen kan se over koden.
+
 
 Arkitetkur 
+
+Måten vi har valgt å bygge SPAen vår er basert på konseptene som React legger opp til. Vi setter sammen mindre komponenter til større komponenter som igjen settes sammen til å lage en fullstendig nettside. 
 
 Øverst i treet har vi app.js som representerer hele nettsiden. Den gennererer kompnenter av 3 kategorier; mediaDisplayArea, tab og category. I disse komponentene behandler vi det som skal skje i de forskjellige områdene, i tilfellene hvor områdene deles opp igjen lager vi flere child komponenter. Når det kommer til oppbyggningen så startet vi med en oppbyggning der vi statisk hadde hardkodet inn alle pathene til alle filer i systemet, og manglet passing av data i begge retninger. Dette er nok det største valget vi gjorde, at vi bygde om nesten alt av arkitektur i applikasjonen fra bunnen i den siste uken. I versjon 2 la vi ekstra vekt på at vi skulle ha gjenbrukbarhet og utvidbarhet, slik at applikasjonen lett skulle kunne tilpasses annet innhold. Dette er da det som er nevnt om at komponentene våre skulle bruke data fra foreldrekomponenter.
 
