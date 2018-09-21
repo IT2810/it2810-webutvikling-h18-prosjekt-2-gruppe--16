@@ -5,6 +5,7 @@ class Picture extends Component {
         super(props);
         this.state = {
             svg: null,
+            fetched:[],
             path: "media/picture/" + props.type + "/" + props.type + props.number +".svg"  //type= haiku/poem/songtext number=1-4 //use this to make text array https://delim.co/#
         };
     }
@@ -20,9 +21,9 @@ class Picture extends Component {
     //Without it the only the active mediaDisplayArea would be loaded
     componentDidMount(){
         fetch(this.state.path)
-          .then(response => response.text())
-          .then(response => this.setState({svg:response}))
-        }
+            .then(response => response.text())
+            .then(response => this.setState({svg:response}))
+    }
 
     //when a the state of this picture component is updated a new picture is fetched
     componentDidUpdate(){
