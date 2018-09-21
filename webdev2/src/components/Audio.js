@@ -8,13 +8,14 @@ class Audio extends Component {
         };
     }
 
-    //This ensures that the state is updated when the props changes. And thus the componentDidUpdate is activated.
+    //This ensures that the state is updated when the props changes. And thus the component is rerendered
     static getDerivedStateFromProps(props, state) {
         return{
             path: "media/audio/" + props.type + "/" + props.type + props.number +".mp3"
         };
     }
 
+    //key is nessecery for the compnent to render. If only the src attribure is used the browser won't registrer the change
     render() {
         return (
             <div>

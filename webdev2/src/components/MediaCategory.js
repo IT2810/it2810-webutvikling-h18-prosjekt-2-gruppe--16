@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class MediaCategory extends Component {
+    //when a radio button is pressed the category choice is passed back up to app via callback functions
     render() {
         return (
             <div className="MediaCategory">

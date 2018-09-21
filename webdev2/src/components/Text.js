@@ -18,6 +18,7 @@ class Text extends Component {
     }
 
     //this fetches the text when a text component is created. this ensures that all the mediaDisplayAreas have a text when category is updated
+    //the json is paresed in to headline and text, where text is an array that is joined with linebreakes
     componentDidMount(){
         fetch(this.state.path)
             .then(response => response.json())
@@ -31,6 +32,7 @@ class Text extends Component {
     }
 
     //this fetches a new text when this component is updated, when the path is updated.
+    //the json is paresed in to headline and text, where text is an array that is joined with linebreakes
     componentDidUpdate(){
         fetch(this.state.path)
             .then(response => response.json())

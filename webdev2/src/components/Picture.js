@@ -5,7 +5,6 @@ class Picture extends Component {
         super(props);
         this.state = {
             svg: null,
-            fetched:[],
             path: "media/picture/" + props.type + "/" + props.type + props.number +".svg"  //type= haiku/poem/songtext number=1-4 //use this to make text array https://delim.co/#
         };
     }
@@ -32,6 +31,7 @@ class Picture extends Component {
             .then(response => this.setState({svg:response}))
     }
 
+    //inserts the svg in the html
     render() {
         return (
             <div dangerouslySetInnerHTML={{__html:this.state.svg}}/>

@@ -11,6 +11,8 @@ class MediaDisplayArea extends Component {
         }
     }
 
+    //this setts the state before the component is rendered.
+    //it compares if the current tab selected is equal to this tabs value, if yes it renders and passes the props further down.
     static getDerivedStateFromProps(props, state) {
         if(props.displayNumber === props.tabSelected) {
             return{
@@ -23,6 +25,7 @@ class MediaDisplayArea extends Component {
         }
     }
 
+    //if statement checks if its the right tab
     render() {
         if(this.state.isEqual) {
             return (

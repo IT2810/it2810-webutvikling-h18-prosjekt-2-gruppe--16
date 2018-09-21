@@ -5,6 +5,8 @@ import Tab from "./components/Tab";
 import MediaDisplayArea from "./components/MediaDisplayArea";
 
 class App extends Component {
+
+  //the state of app contains the selected categories and the active display
   constructor() {
     super();
     this.state = {
@@ -15,8 +17,11 @@ class App extends Component {
     };
   }
 
-    //lifecycle lags behind with tabSelected
 
+  //we pass down all nessecary props to there components
+  //tab sends down a callback function, a tittle and the number of the tab (value). the number of the tab is extracted in the callback functions below and placed in the app state, when the tab is clicked
+  //mediaDisplayArea is where the media is displayed it contains a picture, a text and a sound
+  //mediaCategory where the selections happens
 
   render() {
     return (
@@ -71,6 +76,7 @@ class App extends Component {
     );
   }
 
+    //here is the callback functions passed down in MediaCategory, when the selection changes the state in app.js changes
     onChangeImgTheme = (changeEvent) => {
         this.setState ({imgTheme: changeEvent.target.value});
     };
@@ -83,11 +89,11 @@ class App extends Component {
         this.setState ({textTheme: changeEvent.target.value});
     };
 
+    //here is the callback functions passed down in Tab, when a new tab is active the state in app.js changes
     onChangeTab(newTab){
       this.setState({
         tabSelected: newTab
       });
-
     }
 
 
