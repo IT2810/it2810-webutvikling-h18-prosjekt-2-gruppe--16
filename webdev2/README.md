@@ -2,27 +2,42 @@ This is the second project of group 16 in the course IT2810 at NTNU.
 
 Documentation:
 
-Måten vi har valgt å bygge SPAen vår er basert på konseptene som React legger opp til. Vi setter sammen mindre komponenter til større komponenter som igjen settes sammen til å lage en fullstendig nettside. De grunnleggende komponentene våre er ment i så stor grad som mulig å være bygget av data som blir gitt til dem fra foreldrene sine, slik at appen i så stor grad som mulig skal kunne økes i omfang dynamisk etter behov. Foreldrekompontene er i så stor grad som mulig igjen da bygget av sammensetninger av mindre komponenter.
+Node.js og NPM 
 
-Arkitetkur
-Når det kommer til oppbyggningen så startet vi med en oppbyggning der vi statisk hadde hardkodet inn alle pathene til alle filer i systemet, og manglet passing av data i begge retninger. Dette er nok det største valget vi gjorde, at vi bygde om nesten alt av arkitektur i applikasjonen fra bunnen i den siste uken. I versjon 2 la vi ekstra vekt på at vi skulle ha gjenbrukbarhet og utvidbarhet, slik at applikasjonen lett skulle kunne tilpasses annet innhold. Dette er da det som er nevnt om at komponentene våre skulle bruke data fra foreldrekomponenter.
+For å starte aplikasjonen lokalt kjør npm install og npm start
+
+Måten vi har valgt å bygge SPAen vår er basert på konseptene som React legger opp til. Vi setter sammen mindre komponenter til større komponenter som igjen settes sammen til å lage en fullstendig nettside. 
+
+Arkitetkur 
+
+Øverst i treet har vi app.js som representerer hele nettsiden. Den gennererer kompnenter av 3 kategorier; mediaDisplayArea, tab og category. I disse komponentene behandler vi det som skal skje i de forskjellige områdene, i tilfellene hvor områdene deles opp igjen lager vi flere child komponenter. Når det kommer til oppbyggningen så startet vi med en oppbyggning der vi statisk hadde hardkodet inn alle pathene til alle filer i systemet, og manglet passing av data i begge retninger. Dette er nok det største valget vi gjorde, at vi bygde om nesten alt av arkitektur i applikasjonen fra bunnen i den siste uken. I versjon 2 la vi ekstra vekt på at vi skulle ha gjenbrukbarhet og utvidbarhet, slik at applikasjonen lett skulle kunne tilpasses annet innhold. Dette er da det som er nevnt om at komponentene våre skulle bruke data fra foreldrekomponenter.
+
+Dataflyt
+
+All data går opp og ned gjennom trestrukturen i applikasjonen. Vi har implementert det slik at all data går gjennom app.js siden den har childs som trenger data fra hverandre. Videre så sender vi data gjennom childs til grandchilds der det er hensiktsmessing. Hovedsaklig så vi slipper å gjennbruke kode. 
 
 Testing
+
 Når det kommer til testing har vi som foreslått brukt opptil 4 enheter til å sjekke at det responsive designet fungerte. Gjennom hele utviklingsprosessen så ble hele applikasjoner og deler testet i 4 forskjellige størrelser og format.  Siden det ikke var satt store krav til testing har vi ikke gjennomført større testing av selve koden, men mest om den oppfyller kravene til responsivitet.
 
+Responsive web design
 
-Når det kommer til responsivt design valgte vi å starte med det, applikasjonen skifter format når skjermen er på et gitt antall piksler. Dette skal være det eneste som er nødvendig for en applikasjon av denne typen.
+Vi implementerte CSS grid tidlig i prosessen og har hatt en responseve web applikasjon siden det. Vi fulgte prinsippet med å starte å utvikle til mobil for så å gå over til desktop. Vi har velgt å gjøre hoveddelene av applikasjonen responsive med mediaquary. Det er catagorier og content som blir plasert oppå hverandre når skjermen blir liten. Viewport er en del av create app prosessen og ble automatisk generert den finnes i index.html. 
+
 
 AJAX
 
-Måten vi implementerte AJAX i denne applikasjonene var ved at vi brukte den innbygde fetch funksjonen i React til å asykront laste inn det forskjellige komponentene våre.
-Vi valgte dette over et tredjepartsbiblotek fordi vi ikke så noe behov for mer avanserte funksjonaliteter enn det fetch kunne tilby. Fetch har oppfylt alle kravene vi hadde, og med begrenset tid, så hadde vi ikke mulighet til å lære oss flere nye teknologier, siden vi jevnt over ikke var sterke i React på forhånd, så det allerede krevde en del å få satt seg inn i de teknologiene vi skulle bruke.
-
-
-Viewport:
-
-Denne teknologien ble primært brukt for å gjennomføre kravet om responsivt design. Med den dynamiske skaleringen, så ga dette oss en enkel måte å innfri kravet om repsonsivt design.
-
+Måten vi implementerte AJAX i denne applikasjonene var ved at vi brukte den innbygde fetch funksjonen i React til å asykront laste inn data i applikasjonen. Fetch har oppfylt alle kravene vi hadde. Dette skjer i text.js og i picture.js. Dette gjør vi for å ha kontroll på all funksjonalitet til den kompnenten. Med untak av caching har vi implementert alle AJAX krav. 
+Vi har gjort forsøk på å implementere caching, men har ikke fått det til å fungere uten å fororsake fatale bugs. Som for eksempel å laste svg elementer uendlig mange ganger i en infinate loop. Denne koden er derfor ikke med i koden som leveres inn. 
+Her er hvordan vi prøvde å få det til i pseudo code. 
+Funksjon som handler alt av henting av data, om det er fetch eller local. 
+Sjekker som nåværende path ligger i local storage med - localStorage.getItem(path)
+Hvis ja, hent ut data og lagre i state. Returner og avslutt funksjon.
+Hvis nei, fetch data via en funksjon setResultat.
+slutt funksjon 1
+setResultat aktiveres av fetch og tar inn data som blir hentet som argument
+bruker localStorage.setItem(path, data) til å lagre data i local storage.
+setter staten til kompnenten til data. slik som det allerede står i koden. 
 
 Bilder
 
